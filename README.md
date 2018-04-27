@@ -25,13 +25,10 @@ Run `dockerize-env` on .env.
 Add `env.vars` to `docker-compose.yml`:
 
 ```yml
-services:
-  prisma-db:
+  prisma-database:
+    image: prismagraphql/prisma:1.7
     env_file: .env.vars
-    image: mysql:5.7
-    container_name: prisma-db
-    networks:
-      - prisma
+    restart: always
 ```
 
 Run `source .env.exported`.
