@@ -1,0 +1,3 @@
+clusters:
+    digital-ocean-cluster:
+          host: 'http://__DROPLET_IP_ADDRESS__:4466'
